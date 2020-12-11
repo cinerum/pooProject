@@ -2,25 +2,28 @@ package entities;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.Scanner;
 
 public class Turma {
 
 	Scanner sc = new Scanner(System.in);
-	private Integer codigo_Turma;
+	//STRING COD_TURMA
+	private String codigo_Turma;
 	private Date hora_Inicial;
 	private Date hora_Final;
 	private Date data_Inicio;
 	private Date data_Fim;
 	private boolean status_Turma = true;
 	private Instrutor instrutor;
+	ArrayList<Aluno> aluno = new ArrayList<Aluno>();
 
 	public Turma() {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Turma(Integer codigo_Turma, Date hora_Inicial, Date hora_Final, Date data_Inicio, Date data_Fim,
+	public Turma(String codigo_Turma, Date hora_Inicial, Date hora_Final, Date data_Inicio, Date data_Fim,
 			Instrutor instrutor) {
 		this.codigo_Turma = codigo_Turma;
 		this.hora_Inicial = hora_Inicial;
@@ -33,7 +36,7 @@ public class Turma {
 	public void cadastrarTurma() throws ParseException {
 		System.out.println("CADASTRAR TURMA");
 		System.out.println("Codigo da Turma: ");
-		setCodigo_Turma(sc.nextInt());
+		setCodigo_Turma(sc.next());
 
 		System.out.println("Data Inicio");
 		String sData = (sc.next());
@@ -42,11 +45,11 @@ public class Turma {
 
 	}
 
-	public Integer getCodigo_Turma() {
+	public String getCodigo_Turma() {
 		return codigo_Turma;
 	}
 
-	public void setCodigo_Turma(Integer codigo_Turma) {
+	public void setCodigo_Turma(String codigo_Turma) {
 		this.codigo_Turma = codigo_Turma;
 	}
 
@@ -97,5 +100,15 @@ public class Turma {
 	public void setInstrutor(Instrutor instrutor) {
 		this.instrutor = instrutor;
 	}
+
+	public ArrayList<Aluno> getAluno() {
+		return aluno;
+	}
+
+	public void setAluno(ArrayList<Aluno> aluno) {
+		this.aluno = aluno;
+	}
+	
+	
 
 }

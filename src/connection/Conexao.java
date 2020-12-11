@@ -11,10 +11,10 @@ public static void main(String[] args) {
 		
 		try {
 			// MySQL
-//			 String url = "jdbc:mysql://localhost:3306/db_unitaulas?serverTimezone=UTC";
+			 String url = "jdbc:mysql://localhost:3306/db_unitaulas?serverTimezone=UTC";
 			
 			// SqlServer
-			String url = 	"jdbc:sqlserver://localhost:1433;databaseName=DB_ACADEMIA_NOBOLSO";
+//			String url = 	"jdbc:sqlserver://localhost:1433;databaseName=pooproject";
 
 			// Cria o objeto com a conexão com o BD
 			Connection conexao = DriverManager.getConnection(url, "sa", "RPSsql12345");
