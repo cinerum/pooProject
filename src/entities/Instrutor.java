@@ -11,6 +11,8 @@ public class Instrutor extends Pessoa {
 	public Instrutor() {
 	}
 
+	
+
 	public Instrutor(int codigo_Pessoa, String nome_Completo, Character genero, String cpf, String cep,
 			Date data_Nascimento, boolean status_Pessoa) {
 		super(codigo_Pessoa, nome_Completo, genero, cpf, cep, data_Nascimento, status_Pessoa);
@@ -31,7 +33,7 @@ public class Instrutor extends Pessoa {
 		System.out.println("CEP:");
 		setCep(sc.next());
 		
-		System.out.println("Titulação: ");
+		System.out.println("TitulaÃ§Ã£o: ");
 		setTitulacao(sc.next());
 
 	}
@@ -51,5 +53,8 @@ public class Instrutor extends Pessoa {
 	public void setTitulacao(String titulacao) {
 		this.titulacao = titulacao;
 	}
+
+	
 	
 }
+
