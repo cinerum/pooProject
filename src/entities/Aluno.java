@@ -1,52 +1,32 @@
 package entities;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.Scanner;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 
 public class Aluno extends Pessoa {
 
 	public Scanner sc = new Scanner(System.in);
-
-	private static int matricula = 0;
 	private int codigoMatricula;
 	private float peso;
 	private float altura;
 	private Date data_Matricula;
 	private boolean monitor;
-	private ArrayList<Aluno> listAluno = new ArrayList<Aluno>();
-
-	public static int getMatricula() {
-		return matricula;
-	}
-
-	public static void setMatricula(int matricula) {
-		Aluno.matricula = matricula;
-	}
-
-	public ArrayList<Aluno> getListAluno() {
-		return listAluno;
-	}
-
-	public void setListAluno(ArrayList<Aluno> listAluno) {
-		this.listAluno = listAluno;
-	}
-
-	public void setCodigoMatricula(int codigoMatricula) {
-		this.codigoMatricula = codigoMatricula;
-	}
 
 	public Aluno() {
 		// TODO Auto-generated constructor stub
 	}
+	
+
 
 	public Aluno(int codigo_Pessoa, String nome_Completo, Character genero, String cpf, String cep,
 			Date data_Nascimento, boolean status_Pessoa) {
 		super(codigo_Pessoa, nome_Completo, genero, cpf, cep, data_Nascimento, status_Pessoa);
 		// TODO Auto-generated constructor stub
 	}
+
+
 
 	public void cadastrarAluno() throws ParseException {
 
@@ -69,12 +49,11 @@ public class Aluno extends Pessoa {
 
 		System.out.println("Peso:");
 		setPeso(sc.nextFloat());
-
-		System.out.println("Gênero: ");
+		
+		System.out.println("GÃªnero: ");
 		String sexo = sc.next();
 		setGenero(sexo.charAt(0));
 	}
-	
 
 	public int getCodigoMatricula() {
 		return codigoMatricula;
